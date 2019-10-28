@@ -98,6 +98,7 @@ class DSession(object):
             "load": LoadScheduling,
             "loadscope": LoadScopeScheduling,
             "loadfile": LoadFileScheduling,
+            "loaddir": LoadDirScheduling,
         }
         return schedulers[dist](config, log)
 

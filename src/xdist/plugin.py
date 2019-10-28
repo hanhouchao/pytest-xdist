@@ -74,7 +74,7 @@ def pytest_addoption(parser):
         "--dist",
         metavar="distmode",
         action="store",
-        choices=["each", "load", "loadscope", "loadfile", "no"],
+        choices=["each", "load", "loadscope", "loadfile", "no", "loaddir"],
         dest="dist",
         default="no",
         help=(
@@ -85,6 +85,7 @@ def pytest_addoption(parser):
             "loadscope: load balance by sending pending groups of tests in"
             " the same scope to any available environment.\n\n"
             "loadfile: load balance by sending test grouped by file"
+            "loaddir: load balance by sending test grouped by folder"
             " to any available environment.\n\n"
             "(default) no: run tests inprocess, don't distribute."
         ),
